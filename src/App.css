@@ -1,0 +1,68 @@
+
+@font-face {
+    font-family: 'FuneralText';
+    src: url('./assets/fonts/AsapCondensed-Medium.ttf') format('truetype');
+}
+
+
+.App canvas {
+    height: 50vh !important;
+    border-radius: 10px;
+    border: none;
+}
+
+.FullApp canvas {
+    height: 100vh !important;
+}
+.TrayMain {
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+}
+
+@media(max-width: 500px) {
+    .App {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        overflow-x: hidden;
+    }
+    canvas {
+        height: 25vh !important;
+    }
+}
+
+.App {
+    margin-top: 10px;
+    overflow-x: hidden;
+}
+
+p {
+  font-family: 'FuneralText' , sans-serif;
+  font-weight: 100;
+}
+
+.audience-div {
+   background-color: greenyellow;
+   border-radius: 50%;
+   width: 90px;
+   height: 90px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.carasol-div {
+    width: 250px;
+}
+.audience-text {
+    color: #fff;
+    font-size: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 10;
+}
+
+.audience-border {
+    border: none;
+    border-radius: 50% !important;
+}
