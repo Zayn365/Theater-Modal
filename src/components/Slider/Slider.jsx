@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import {Html} from '@react-three/drei'
 
 
-
-
   export default function Slider({data, id}) {
     const [memories, setMemories] = useState();
     const [size] = useState(0.5);
@@ -18,10 +16,10 @@ import {Html} from '@react-three/drei'
     } , [id , data]);
 
     return (
-      <mesh scale={[size * 24, 6.1, 1]} position={[0,4,-10]}>
+      <mesh scale={[size * 24, 5.1, 1]} position={[0,3.5,3.4]}>
         <boxGeometry />
-        <meshStandardMaterial color='black' className='mt-5' />
-        <Html occlude distanceFactor={1.5} position={[0, 0, 0.51]} transform>
+        <meshStandardMaterial transparent opacity={0} className='mt-5' />
+        <Html occlude={false} distanceFactor={1.5} position={[0, 0, 0.51]} transform>
   
   <div id="carouselExampleControls" className="carousel slide carasol-div" data-ride="carousel">
     <div className="carousel-inner">

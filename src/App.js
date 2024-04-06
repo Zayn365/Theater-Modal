@@ -3,11 +3,13 @@ import Model from '../src/components/MainModal/Hall';
 import { Suspense, useRef, useState } from 'react'; // Import useRef
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, EnvironmentMap } from '@react-three/drei';
-import DeadPersonBox from './components/DeadPersonBox/DeadPersonBox';
+import BannerLeft from './components/Banner/BannerLeft'
 import Slider from './components/Slider/Slider';
 import Audience from './components/Audience/Audience';
 import { data } from './utils/data';
 import AppsHooks from './hooks/appHooks';
+import BannerRight from './components/Banner/BannerRight';
+
 
 function App() {
   const [modelLoaded, clickedMemory, setMemory, setSwitch] = AppsHooks();
@@ -38,32 +40,33 @@ function App() {
           <OrbitControls
             enableZoom={true}
             enablePan={false}
-            minPolarAngle={(Math.PI * 4.5) / 12}
+            minPolarAngle={(Math.PI * 5.2) / 12}
             maxPolarAngle={(Math.PI * 5.5) / 12}
-            minDistance={10}
-            maxDistance={28}
-            minAzimuthAngle={-Math.PI / 2.5} // -90 degrees
-            maxAzimuthAngle={Math.PI / 2.5} // 90 degrees
+            minDistance={15}
+            maxDistance={30}
+            minAzimuthAngle={-Math.PI / 6} // -90 degrees
+            maxAzimuthAngle={Math.PI / 6} // 90 degrees
           />
           <EnvironmentMap background="only" />
           <Suspense fallback={null}>
             <Slider data={data} id={clickedMemory} />
-            <DeadPersonBox data={data} setMemory={setMemory} />
-            <Audience data={data} setMemory={setMemory} id={clickedMemory} />
+            <BannerLeft setMemory={setMemory} />
+            <BannerRight setMemory={setMemory} />
+            <Audience data={data} setMemory={setMemory} id={clickedMemory} fullScreen={fullScreen} />
             <Model ref={modelRef} />
           </Suspense>
         </Canvas>
         <div className='d-flex justify-content-between TrayMain'> 
         <div>
-          {!speaker ? <button className='rounded-circle bg-light' onClick={() => handleSpeaker(false)}>
-          <img src='/img/volume.png' width={20} height={20} alt='speakerOn' />
+          {!speaker ? <button className='btn rounded-circle bg-light' onClick={() => handleSpeaker(false)}>
+          <img src='/img/volume.png' width={15} height={15} alt='speakerOn' />
           </button> : 
-          <button className='rounded-circle bg-light' onClick={() => handleSpeaker(true)}>
-          <img src='/img/volume-mute.png' width={20} height={20} alt='speakerOff' />
+          <button className='btn rounded-circle bg-light' onClick={() => handleSpeaker(true)}>
+          <img src='/img/volume-mute.png' width={15} height={15} alt='speakerOff' />
           </button>}
         </div>
         <div>
-          <button className='rounded-circle bg-light' onClick={handleScreen}>
+          <button className='btn rounded-circle btn-light border-0' onClick={handleScreen}>
           <img src={fullScreen ? '/img/full-screen.png' :'/img/expand.png'} width={20} height={20} alt='Zoom' />
           </button>
         </div>

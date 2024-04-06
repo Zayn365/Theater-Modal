@@ -4,12 +4,12 @@ export default function AppsHooks() {
   const [modelLoaded, setModelLoaded] = useState(false);
   const [clickedMemory, setMemory] = useState();
   const [Switch, setSwitch] = useState(false);
-  const audioRef = useRef(new Audio(process.env.PUBLIC_URL + '/music/Interstellar.mp3'));
+  const audioRef = useRef(new Audio(process.env.PUBLIC_URL + '/music/This.wav'));
 
   useEffect(() => {
     setTimeout(() => {
       setModelLoaded(true);
-    }, 5000);
+    }, 15000);
   }, []);
 
   useEffect(() => {

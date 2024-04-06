@@ -4,6 +4,11 @@
     src: url('./assets/fonts/AsapCondensed-Medium.ttf') format('truetype');
 }
 
+@media(min-height: 100vh) {
+    .ht{
+        margin-left: -3rem;
+    }
+}
 
 .App canvas {
     height: 50vh !important;
@@ -15,11 +20,25 @@
     height: 100vh !important;
 }
 .TrayMain {
+    padding: 0px 20px 0px 0px;
     position: absolute;
-    top: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0.5;
 }
-
+@media(max-width: 769px) {
+    .ht-w{
+        margin-left: -3rem !important;
+    }
+    .ht{
+        margin-left: -3rem;
+    }
+}
+/* @media(max-width: 425px) {
+    .ht{
+        margin-left: -12rem;
+    } 
+} */
 @media(max-width: 500px) {
     .App {
         margin-top: 0px;
@@ -32,6 +51,7 @@
     }
 }
 
+
 .App {
     margin-top: 10px;
     overflow-x: hidden;
@@ -43,7 +63,7 @@ p {
 }
 
 .audience-div {
-   background-color: greenyellow;
+   background-color: #fff;
    border-radius: 50%;
    width: 90px;
    height: 90px;
@@ -55,8 +75,8 @@ p {
     width: 250px;
 }
 .audience-text {
-    color: #fff;
-    font-size: 13px;
+    color: #2c2b2b;
+    font-size: 14px;
     padding-left: 30px;
     padding-right: 30px;
     font-weight: 10;
@@ -65,4 +85,8 @@ p {
 .audience-border {
     border: none;
     border-radius: 50% !important;
+}
+
+.image-container {
+    width: 100rem;
 }

@@ -1,0 +1,8 @@
+Model Information:
+* title:	Auditorium Future | Hall | Baked
+* source:	https://sketchfab.com/3d-models/auditorium-future-hall-baked-9be313cd17594198bd4cc477bcbfa16a
+* author:	ChristyHsu (https://sketchfab.com/ida61xq)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
